@@ -1,3 +1,4 @@
+const fs = require('fs');
 const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
@@ -7,10 +8,10 @@ const connection = mysql.createConnection({
   database: process.env.DB_NAME,
   port: process.env.DB_PORT || 3306,
   ssl: {
+    ca: fs.readFileSync('./ca.pem'),
     rejectUnauthorized: true
   }
 });
-
 connection.connect((err) => {
   if (err) {
     console.error('Database Connection Error:', err);
