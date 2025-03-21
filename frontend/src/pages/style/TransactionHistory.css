@@ -1,0 +1,70 @@
+/* TransactionHistory.css */
+:root {
+  --background-color: #e0f7fa; /* Light cyan background */
+  --text-color: #000000; /* Black text color */
+  --table-background: #ffffff; /* White background for table */
+  --table-border: #004d40; /* Dark green border for table */
+  --table-header-background: #b2dfdb; /* Light green background for table header */
+  --table-header-text-color: #000000; /* Black text for table header */
+  --table-row-background: #f0f0f0; /* Light grey background for table rows */
+  --table-row-hover-background: #e0e0e0; /* Darker grey background for table row hover */
+  --dropdown-background: #ffffff; /* White background for dropdown */
+  --dropdown-text-color: #000000; /* Black text for dropdown */
+  --dropdown-border: #004d40; /* Dark green border for dropdown */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.transaction-history-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.transaction-table {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  background-color: var(--table-background);
+  border: 1px solid var(--table-border);
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 1rem;
+  border: 1px solid var(--table-border);
+  color: #000000; /* Explicitly set black text color */
+}
+
+.transaction-table th {
+  background-color: var(--table-header-background);
+  color: #000000; /* Explicitly set black text color */
+}
+
+.transaction-table tr:nth-child(even) {
+  background-color: var(--table-row-background);
+}
+
+.transaction-table tr:hover {
+  background-color: var(--table-row-hover-background);
+}
+
+.date-filter-dropdown {
+  background-color: var(--dropdown-background);
+  color: var(--dropdown-text-color); /* Black text color */
+  border: 1px solid var(--dropdown-border);
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}

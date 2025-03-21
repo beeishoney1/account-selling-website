@@ -1,0 +1,122 @@
+/* MainPage.css */
+:root {
+    --background-color: radial-gradient(circle, #0f172a, #1e293b); /* Sci-fi background */
+    --text-color: #00ffff; /* Cyan text color */
+    --box-background: rgba(255, 255, 255, 0.1); /* Transparent white for boxes */
+    --box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Cyan glow effect */
+    --button-background: #00ffff; /* Cyan button background */
+    --button-hover-background: #00cccc; /* Darker cyan on hover */
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Orbitron', sans-serif; /* Sci-fi font */
+}
+
+.main-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.main-page-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px cyan;
+}
+
+.main-page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--box-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.main-page-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.main-page-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px cyan;
+}
+
+.main-page-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-page-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: black;
+    font-style: bold;
+}
+
+.main-page-price {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: black; /* Green color for price */
+}
+
+.main-page-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--button-background);
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.main-page-button:hover {
+    background: var(--button-hover-background);
+    box-shadow: 0 0 10px cyan;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .main-page-container {
+        padding: 1rem;
+    }
+
+    .main-page-title {
+        font-size: 2rem;
+    }
+
+    .main-page-content {
+        padding: 1rem;
+    }
+
+    .main-page-image {
+        max-width: 500px;
+    }
+
+    .main-page-text {
+        font-size: 1rem;
+    }
+
+    .main-page-price {
+        font-size: 1.2rem;
+    }
+
+    .main-page-button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

@@ -1,0 +1,122 @@
+/* Store.css */
+.store-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: radial-gradient(circle, #1a1a2e, #16213e);
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  min-height: 100vh;
+}
+
+.store-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #00d4ff;
+}
+
+.stock-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.stock-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+  text-align: center;
+  border: 2px solid #00d4ff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 250px;
+}
+
+.stock-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00d4ff;
+}
+
+.stock-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: black;
+}
+
+.buy-button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #00d4ff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.buy-button:hover {
+  background: rgb(0, 150, 200);
+  box-shadow: 0 0 10px #00d4ff;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.amount-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.amount-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.amount-input:focus {
+  border-color: #00d4ff;
+  outline: none;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .store-container {
+      padding: 1rem;
+  }
+
+  .store-title {
+      font-size: 2rem;
+  }
+
+  .stock-item {
+      width: 100%;
+  }
+
+  .amount-input {
+      padding: 0.5rem;
+      font-size: 0.875rem;
+  }
+
+  .buy-button {
+      padding: 0.5rem;
+      font-size: 0.875rem;
+  }
+}

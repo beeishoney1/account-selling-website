@@ -1,0 +1,136 @@
+/* Navbar.css */
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --navbar-background: #333;
+    --navbar-text-color: #fff;
+    --navbar-hover-background: #444;
+    --navbar-hover-text-color: #ff0;
+    --navbar-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="night"] {
+    --background-color: #1e1e1e;
+    --text-color: #fff;
+    --navbar-background: #000;
+    --navbar-text-color: #fff;
+    --navbar-hover-background: #444;
+    --navbar-hover-text-color: #ff0;
+    --navbar-box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--navbar-background);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: var(--navbar-box-shadow);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: var(--navbar-text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    flex: 1;
+    justify-content: center; /* Center the brand */
+}
+
+.navbar-logo {
+    width: 60px; /* Make the logo a little bigger */
+    height: 60px;
+    margin-right: 0.5rem;
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    color: var(--navbar-text-color);
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.navbar-link {
+    color: var(--navbar-text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    text-align: center; /* Center the text */
+}
+
+.navbar-link:hover {
+    background-color: var(--navbar-hover-background);
+    color: var(--navbar-hover-text-color);
+    box-shadow: 0 0 8px rgba(255, 255, 0, 0.5); /* Add a slight glow effect */
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--navbar-text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.mode-toggle {
+    background: none;
+    border: none;
+    color: var(--navbar-text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0; /* Position the dropdown to the right */
+        width: auto; /* Adjust width to fit content */
+        background: linear-gradient(135deg, #1e1e1e, #3a3a3a); /* Gradient background */
+        box-shadow: var(--navbar-box-shadow);
+        z-index: 1000; /* Ensure the dropdown is above other content */
+        border-radius: 8px; /* Add border radius to the dropdown menu */
+    }
+
+    .navbar-menu.open {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        margin: 0;
+        padding: 0.5rem 1rem; /* Smaller padding for phone screens */
+        border-bottom: 1px solid #444;
+        text-align: center; /* Center the text */
+    }
+
+    .navbar-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}

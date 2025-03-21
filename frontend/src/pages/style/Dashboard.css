@@ -1,0 +1,43 @@
+/* Dashboard.css */
+:root {
+    --background-color: radial-gradient(circle, #0f172a, #1e293b); /* Sci-fi background */
+    --text-color: #00ffff; /* Cyan text color */
+    --box-background: rgba(255, 255, 255, 0.1); /* Transparent white for boxes */
+    --box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Cyan glow effect */
+  }
+  
+  body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Orbitron', sans-serif; /* Sci-fi font */
+  }
+  
+  .dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 2rem;
+  }
+  
+  .dashboard-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px cyan;
+  }
+  
+  .dashboard-balance {
+    font-size: 1.5rem;
+    background: var(--box-background);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .dashboard-balance:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px cyan;
+  }
