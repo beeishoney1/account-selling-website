@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
   database: process.env.DB_NAME,
   port: process.env.DB_PORT || 3306,
   ssl: {
-    ca: fs.readFileSync('./config/ca.pem'), // Correct path for backend/config/ca.pem
+    ca: fs.readFileSync('./ca.pem'), // Correct path for backend/config/ca.pem
     rejectUnauthorized: true
   }
 });
